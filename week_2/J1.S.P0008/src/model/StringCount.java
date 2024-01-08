@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 public class StringCount {
     
     private final HashMap<String, Integer> wordCountMap;
-    private final HashMap<String, Integer> charCountMap;
+    private final HashMap<Character, Integer> charCountMap;
 
     public StringCount() {
         wordCountMap = new HashMap<>();
@@ -39,10 +39,10 @@ public class StringCount {
         while (st.hasMoreTokens()) {
             String nextToken = st.nextToken();
             for (Character c : nextToken.toCharArray()) {
-                if (charCountMap.containsKey(c.toString())) {
-                    charCountMap.put(c.toString(), charCountMap.get(c.toString()) + 1);
+                if (charCountMap.containsKey(c)) {
+                    charCountMap.put(c, charCountMap.get(c) + 1);
                 } else
-                    charCountMap.put(c.toString(),1);
+                    charCountMap.put(c,1);
             }
         }
         
