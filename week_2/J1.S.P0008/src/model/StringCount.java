@@ -13,16 +13,28 @@ import java.util.StringTokenizer;
  */
 public class StringCount {
     
+    private String string;
     private final HashMap<String, Integer> wordCountMap;
-    private final HashMap<Character, Integer> charCountMap;
-
-    public StringCount() {
+    private final HashMap<Character, Integer> charCountMap;   
+    
+    public StringCount(String string) {    
+        this.string = string;
         wordCountMap = new HashMap<>();
         charCountMap = new HashMap<>();
     }
+
+    public String getString() {
+        return string;
+    }
+
+    public void setString(String string) {
+        this.string = string;
+    }
     
     
-    public void countWord(String string){
+    
+    
+    public void countWord(){
         StringTokenizer st = new StringTokenizer(string);
         while (st.hasMoreTokens()) {
             String nextToken = st.nextToken();
@@ -34,7 +46,7 @@ public class StringCount {
     
     }
     
-    public void countCharacter(String string){
+    public void countCharacter(){
         StringTokenizer st = new StringTokenizer(string);
         while (st.hasMoreTokens()) {
             String nextToken = st.nextToken();

@@ -12,10 +12,10 @@ import model.StringCount;
  * @author PC
  */
 public class HomeView {
-    public void show(){
+    
+    public void show(){       
         Scanner sc = new Scanner(System.in);
         String str;
-        
         System.out.println("Enter your content : ");
         do {
             str = sc.nextLine();
@@ -23,11 +23,12 @@ public class HomeView {
                 System.out.println("Please enter your content !!!");
             }
         } while (str.isEmpty());
-                
-        StringCount stringCount = new StringCount();
-        stringCount.countWord(str);
-        stringCount.countCharacter(str);     
+        
+        StringCount stringCount = new StringCount(str);
+        stringCount.countWord();
+        stringCount.countCharacter();     
         stringCount.display();
     }
     
+   
 }
