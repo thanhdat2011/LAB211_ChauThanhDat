@@ -43,7 +43,7 @@ public class StringCount {
             } else
                 wordCountMap.put(nextToken, 1);
         }
-    
+        System.out.println(wordCountMap);
     }
     
     public void countCharacter(){
@@ -57,13 +57,9 @@ public class StringCount {
                     charCountMap.put(c,1);
             }
         }
-        
-    }
-    
-    public void display(){
-        System.out.println(wordCountMap);
         System.out.println(charCountMap);
     }
+
     
     
 }

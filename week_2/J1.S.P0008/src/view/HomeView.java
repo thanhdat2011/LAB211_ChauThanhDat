@@ -27,7 +27,6 @@ public class HomeView {
         StringCount stringCount = new StringCount(str);
         stringCount.countWord();
         stringCount.countCharacter();     
-        stringCount.display();
     }
     
    
