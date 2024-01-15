@@ -66,7 +66,7 @@ public class CandidateController {
         int candidate_type = validationUtil.inputCandidateTypeFrom0to2("Candidate type(0: Experience | 1: Fresher | 2: Intern)");
         
         List<Candidate> searchList = candidateService.searchByNameAndType((Candidate p)-> 
-                p.getFirstName().trim().contains(name) || p.getLastName().trim().contains(name)
+                (p.getFirstName().trim().contains(name) || p.getLastName().trim().contains(name))
                         && p.getCandidate_type() == candidate_type);
         
         System.out.println("");
