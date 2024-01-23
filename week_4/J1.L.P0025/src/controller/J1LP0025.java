@@ -59,7 +59,7 @@ public class J1LP0025 {
         normalizer.addNormalizer(new OnlySpaceAfterMarkNormalizer(","));
         normalizer.addNormalizer(new OnlySpaceAfterMarkNormalizer(":"));
         normalizer.addNormalizer(new UppercaseFirstCharOfSentenceNormalizer());
-        //This also include same function with OnlySpaceBetweenMarkNormalizer(".")
+//        This also include same function with OnlySpaceBetweenMarkNormalizer(".")
         normalizer.addNormalizer(new DotAtTheEndNormalizer());
         normalizer.addNormalizer(new OnlySpaceBetweenMarkNormalizer("\""));
         normalizer.addNormalizer(new NoSpaceInQuoteNormalizer());
@@ -77,6 +77,7 @@ public class J1LP0025 {
         System.out.println("DONE");
         
         System.out.print("NORMALIZING CONTENT...");
+//        do normalize
         String normalized = normalizer.normalize(content);
         System.out.println("DONE");
 

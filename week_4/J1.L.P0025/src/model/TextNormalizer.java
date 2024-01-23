@@ -26,8 +26,7 @@ public class TextNormalizer {
         StringTokenizer token = new StringTokenizer(source, "\n");
         String normalized = new String();
         
-        while(token.hasMoreTokens())
-        {
+        while(token.hasMoreTokens()) {
             String line = token.nextToken().trim();
             if(line.isEmpty())
                 continue;
@@ -41,4 +40,5 @@ public class TextNormalizer {
         
         return normalized.substring(0, normalized.length() - 1); //remove \n at the end
     }
+    
 }
