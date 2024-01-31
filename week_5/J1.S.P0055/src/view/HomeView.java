@@ -58,6 +58,7 @@ public class HomeView {
         int availability = validationUtil.inputForParseInteger("Enter Availability");
         try {
             doctorController.addDoctor(new Doctor(code, name, specialization, availability));
+            System.out.printf("Add %s successfull !!! \n", name);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -74,6 +75,7 @@ public class HomeView {
         String code = validationUtil.inputWithOutEmpty("Enter code");
         try {
             doctorController.removeDoctorByCode(code);
+            System.out.printf("Delete doctor having code '%s' successfull !!!", code);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -81,11 +83,15 @@ public class HomeView {
     }
     
     private void searchDoctorByAllField(){
-        String text = validationUtil.inputWithOutEmpty("Enter text");
+        String text = validationUtil.inputWithOutEmpty("Enter text").trim().toLowerCase();
         List<Doctor> res = doctorController.searchDoctorByAllField(text);
-        for (Doctor doctor : res) {
-            System.out.println(doctor);
-        }
+        if (!res.isEmpty()) {
+            for (Doctor doctor : res) {
+                System.out.println(doctor);
+            }
+        } else
+            System.out.println("Not found any doctor !!!");
+        
     }
     
     private void updateDoctor(){
@@ -98,6 +104,7 @@ public class HomeView {
             String specialization = validationUtil.inputWithOutEmpty("Enter Specialization");
             int availability = validationUtil.inputForParseInteger("Enter Availability");
             doctorController.updateDoctor(new Doctor(code, name, specialization, availability));
+            System.out.println("Update successfully !!!");
         } catch (Exception e) {
              System.err.println(e.getMessage());
         }

@@ -29,10 +29,10 @@ public class DoctorController {
     }
 
     public List<Doctor> searchDoctorByAllField(String text) {
-        return doctorService.searchDoctorByAllField((
-                    Doctor e )-> e.getCode().contains(text)
-                            || e.getName().contains(text)
-                            || e.getSpecialization().contains(text)
+        return doctorService.searchDoctorByAllField(
+                   ( Doctor e )-> e.getCode().toLowerCase().contains(text)
+                            || e.getName().toLowerCase().contains(text)
+                            || e.getSpecialization().toLowerCase().contains(text)
                             );
     }
 
