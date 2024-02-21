@@ -21,7 +21,7 @@ public class HomeView {
     private ValidationUtil validationUtil = new ValidationUtil();
     
     public void show(){
-        String[] options = {"Find Person Info", "Coppy Text to new file"};
+        String[] options = {"Find Person Info", "Coppy Text to new file", "Exit"};
         Menu<String> homeMenu = new Menu<String>("File Processing", options) {
             @Override
             public void execute(int choice) {
@@ -32,6 +32,8 @@ public class HomeView {
                     case 2:
                         copyWordOneTimes();
                         break;
+                    case 3:
+                        System.exit(0);
                     default:
                         System.out.println("Invalid Choice !!!");
                 }

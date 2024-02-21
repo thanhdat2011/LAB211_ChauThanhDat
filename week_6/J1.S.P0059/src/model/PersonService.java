@@ -27,8 +27,14 @@ public class PersonService {
             String line;
             while((line = bufferedReader.readLine()) != null) {
                 String[] row = line.split(";");
-       
-                double money = Double.parseDouble(row[2]);
+                double money;
+                
+                try {
+                    money = Double.parseDouble(row[2]);
+                } catch (NumberFormatException e) {
+                    money = 0.0;
+                }
+                
                 if (money < salary) {
                     continue;
                 }
@@ -38,7 +44,7 @@ public class PersonService {
                 Person person = new Person(name, address, money);
                 res.add(person);
                 sortList(res);
-            }
+            }          
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
