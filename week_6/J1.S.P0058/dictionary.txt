@@ -1,0 +1,24 @@
+chicken-con Gà
+hamster-chuột đồng
+goodbye-tạm biệt
+cow-con bò
+goat-con dê
+tiger-con hổ
+horse-con ngựa
+goldfish-cá vàng
+kitten-mèo con
+gecko-con tắc kè
+puppy-chó con
+dove-bồ câu
+duck-vịt
+cat-con mèo
+rabbit-thỏ
+bird-con chim
+bear-con gấu
+piglet-lợn con
+sparrow-con vẹt
+hello-xin chào
+dog-con chó
+parrot-con vẹt
+dalmatian-chó đốm
+sheep-con cừu
