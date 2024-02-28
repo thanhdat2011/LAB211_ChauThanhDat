@@ -5,6 +5,9 @@
 package view;
 
 import controller.CalculatorShapeController;
+import model.Circle;
+import model.Rectangle;
+import model.Triangle;
 import util.Menu;
 import util.ValidationUtil;
 
@@ -27,20 +30,20 @@ public class HomeView {
                 switch (choice) {
                     case 1:
                         double radius = validationUtil.inputDoubleGreaterThan("Please input radius of Circle", 0);
-                        result = csc.getResultCircle(radius);
+                        result = csc.getResultCircle(new Circle(radius));
                         System.out.println(result);
                         break;
                     case 2:
                         double a = validationUtil.inputDoubleGreaterThan("Please input side A of Triangle", 0);
                         double b = validationUtil.inputDoubleGreaterThan("Please input side B of Triangle", 0);
                         double c = validationUtil.inputDoubleGreaterThan("Please input side C of Triangle", 0);
-                        result = csc.getResultTriangle(a,b,c);
+                        result = csc.getResultTriangle(new Triangle(a,b,c));
                         System.out.println(result);
                         break;
                     case 3:
                         double width = validationUtil.inputDoubleGreaterThan("Please input width of Rectangle", 0);
                         double length = validationUtil.inputDoubleGreaterThan("Please input length of Rectangle", 0);
-                        result = csc.getResultRectangle(width, length);
+                        result = csc.getResultRectangle(new Rectangle(width, length));
                         System.out.println(result);
                         break;
                     case 4:

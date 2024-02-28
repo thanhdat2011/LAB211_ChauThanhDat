@@ -14,20 +14,19 @@ import model.Triangle;
  */
 public class CalculatorShapeController {
 
-    public String getResultCircle(double radius) {
-        return new Circle(radius).getResult();
+    public String getResultCircle(Circle circle) {
+        return circle.getResult();
     }
 
-    public String getResultTriangle(double a, double b, double c) {
-        Triangle triangle = new Triangle(a, b, c);
+    public String getResultTriangle(Triangle triangle) {
         if (!triangle.isTriangle()) {
             return "It is not triangle !!!";
         }
         return triangle.getResult();
     }
 
-    public String getResultRectangle(double width, double length) {
-        return new Rectangle(width, length).getResult();
+    public String getResultRectangle(Rectangle rectangle) {
+        return rectangle.getResult();
     }
     
 }
